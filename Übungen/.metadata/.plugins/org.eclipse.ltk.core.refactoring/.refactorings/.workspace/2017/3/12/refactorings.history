@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;U2_Taschenrechner_Vorlage&apos;" deleteContents="false" description="Delete resource &apos;U2_Taschenrechner_Vorlage&apos;" element1="/U2_Taschenrechner_Vorlage" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1490306355901"/>&#x0A;<refactoring comment="Delete resource &apos;U1_SwingGUITutorial_Muster&apos;" deleteContents="false" description="Delete resource &apos;U1_SwingGUITutorial_Muster&apos;" element1="/U1_SwingGUITutorial_Muster" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1490306357752"/>
+</session>

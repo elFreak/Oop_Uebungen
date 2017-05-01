@@ -1,0 +1,78 @@
+import java.util.Observable;
+
+public class Model extends Observable {
+	private Complex[] H;
+	private double[] faxis;
+
+	/**
+	 * Konstruiert Model mit Frequenzgang und Frequenzachse.
+	 * 
+	 * @param fStart
+	 *            Startfrequenz des Frequenzganges
+	 * @param fStop
+	 *            Stoppfrequenz des Frequenzganges
+	 * @param n
+	 *            Anzahl Datenpunkte
+	 */
+	public Model(double fStart, double fStop, int n) {
+	}
+
+	/**
+	 * Setzt Übertragungsfunktion, gegeben durch Zähler- und Nennerpolynom.
+	 * Berechnet direkt den zugehörigen Frequenzgang mittels SVTools.freqs() und
+	 * der Frequenzachse des Models. Benachrichtigt Observers.
+	 * 
+	 * @param zaehler
+	 *            Zaehlerpolynom
+	 * @param nenner
+	 *            Nennerpolynom
+	 */
+	public void setUTF(double[] zaehler, double[] nenner) {
+
+		
+		this.setChanged();
+		this.notifyObservers();
+	}
+
+	/**
+	 * Holt Frequenzachse.
+	 * 
+	 * @return
+	 */
+	public double[] getFaxis() {
+		return faxis;
+	}
+
+	/**
+	 * Holt Amplitude von H.
+	 * 
+	 * @return
+	 */
+	public double[] getAmplitude() {
+		return Complex.abs(H);
+	}
+
+	/**
+	 * Holt Phase von H.
+	 * 
+	 * @return
+	 */
+	public double[] getPhase() {
+		return Complex.angle(H);
+	}
+
+	public int getLength() {
+		if (H == null)
+			return 0;
+		else
+			return H.length;
+	}
+
+	/**
+	 * Benachrichtigt Observers.
+	 */
+	public void notifyObservers() {
+		setChanged();
+		super.notifyObservers();
+	}
+}

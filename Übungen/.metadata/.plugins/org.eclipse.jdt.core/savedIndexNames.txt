@@ -1,0 +1,2 @@
+INDEX VERSION 1.129+C:\Users\Marc\Dropbox\Studium\2. Semester\Oop\Übungen\.metadata\.plugins\org.eclipse.jdt.core
+1877624570.index
