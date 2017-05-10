@@ -15,7 +15,13 @@ public class View extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		View view = new View();
-		view.setVisible(true);
+		for (int i = 0; i < 7; i++) {
+			if(i>3){
+				System.out.println("if");
+				if(i>4)
+				break;
+			}
+			System.out.println(i+"\n");
+		}
 	}
 }
